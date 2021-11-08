@@ -1,13 +1,194 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <title>不如吃茶去</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
-  </body>
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://scholar.google.com/citations?user=TSje0EkAAAAJ&hl=zh-CN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156699410-1');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+
+    <title>Jiacheng Wang 汪家诚</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="navbar navbar-fixed-top">
+    <div class="container">
+        <strong class="navbar-brand">Jiacheng Wang / 汪家诚</strong>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">About</a></li>
+                <li><a href="#publication">Publications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#prizes">Prizes</a></li>
+                <li><a href="#honors">Honors</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="gray-container" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <img id="me-img" src="images/wjc.jpg">
+
+                <div style="margin-top: 10%; font-size: large";><strong>Jiacheng Wang / 汪家诚</strong></div>
+                <div style="margin-top: 5%"> PhD Student at Xiamen University</div>
+                <div style="margin-top: 5%"> jiachengw@stu.xmu.edu.cn </div>
+            </div>
+            <div class="col-xs-8">
+                <h2>
+                    <strong>Jiacheng Wang</strong>
+                    <a href="">
+                        <img src = "images/icon/cv.png" title = "cv" width ="36" height = "36">
+                    </a>
+                    <a href="https://github.com/jcwang123" target="_blank">
+                        <img src = "images/icon/github_square.png" title = "github" width ="24">
+                    </a>
+                </h2>
+
+                <p>
+                <img src="images/icon/education.png" title="education" width="24" height="24">  
+                I am currently a PhD student at Xiamen University (XMU), supervised by Professor Liansheng Wang. Before that, I received my Bachelor’s degree at Xiamen University in July 2018.
+                <br/>
+                </p>
+
+                <br/>
+                <p>
+                <img src="images/icon/thought.png" title="thoughts" width="24" height="24"> My research interests are in Medical Imaging Processing, including Object Segmentation and Surgery Analysis.
+                </p>
+
+                <br/>
+                </p> -->
+                <br>
+                <div>
+                    <div id="news"><img src="images/icon/news.png" title="news" width="24" height="24"> News</div>
+                    <div class="row work-block">
+                        <ul>
+                            <li> 
+                                2021.10 &nbsp; Our <a href="" target="_blank">ESD landmark detection network</a> is accepted by <a href="https://www.sciencedirect.com/science/article/abs/pii/S1361841521003364" target="_blank">Medical Image Analysis 2021</a>! Code is available <a href="https://github.com/jcwang123/ESD_Landmark_detection" target="_blank">here</a>.
+                            </li>   
+                            <li> 
+                                2021.10 &nbsp; We have won the first prize of <a href="https://adaptor2021.github.io/" target="_blank"> AdaptOR Challenge</a>.
+                            </li>   
+                            <li> 
+                                2021.05 &nbsp; Our <a href="https://arxiv.org/abs/2110.03864" target="_blank">Boundary-aware Tranformer</a> by MICCAI 2021! Code is available <a href="https://github.com/jcwang123/BA-Transformer" target="_blank">here</a>.
+                            </li>   
+                            <li> 
+                                2021.05 &nbsp; Our <a href="https://arxiv.org/abs/2109.13593" target="_blank">Global-Local Memory Network</a> is accepted by MICCAI 2021! Code is available <a href="https://github.com/jcwang123/DMNet" target="_blank">here</a>.
+                            </li>   
+                            <li> 
+                                2019.10 &nbsp; We have won the first prize of <a href="https://adaptor2021.github.io/" target="_blank"> ROBUST-MIS 2019</a>! 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rows" style="margin-left: 8%">
+
+
+<div id="publication">
+    <div class="container">
+        <h2 class="section_title">Publications 
+            <a href="https://scholar.google.com/citations?user=TSje0EkAAAAJ&hl=zh-CN" target="_blank">
+                    (<img src = "images/icon/scholar.jpg" title = "scholar" width ="28"> Google Scholar)
+            </a>
+        </h2>
+    
+    <!-- Paper MediA 2021 -->
+    <div class="row work-block">
+        <div class="project col-xs-3">
+            <img class="work-img" src="papers/MediA2021_ESD/arch.png">
+        </div>
+
+        <div class="col-xs-8">
+            <font color=#e67e22><u>Jiacheng Wang</u></font>, Lan Wei, Liansheng Wang, Qichao Zhou, Lei Zhu, Jing Qin
+            <br>
+            <strong>Real-time landmark detection for precise endoscopic submucosal dissection via shape-aware relation network</strong>
+            <br>
+            <em><i>Medical Image Analysis (<strong>MediA</strong>)</i>, 2021</em>
+        </div>
+    </div>
+
+    <!-- Paper MICCAI 2021 -->
+    <div class="row work-block">
+        <div class="project col-xs-3">
+            <img class="work-img" src="papers/MICCAI2021_BAT/arch.png">
+        </div>
+
+        <div class="col-xs-8">
+            <font color=#e67e22><u>Jiacheng Wang</u></font>, Yueming Jin, Shuntian Cai, Hongzhi Xu, Pheng-Ann Heng, Jing Qin, Liansheng Wang
+            <br>
+            <strong>Boundary-aware Transformers for Skin Lesion Segmentation</strong>
+            <br>
+            <em><i>Medical Image Computing and Computer Assisted Intervention (<strong>MICCAI</strong>)</i>, 2021</em>
+        </div>
+    </div>
+
+    <div class="row work-block">
+        <div class="project col-xs-3">
+            <img class="work-img" src="papers/MICCAI2021_DMNet/arch.png">
+        </div>
+
+        <div class="col-xs-8">
+            <font color=#e67e22><u>Jiacheng Wang</u></font>, Yueming Jin, Liansheng Wang, Shuntian Cai, Pheng-Ann Heng, Jing Qin
+            <br>
+            <strong>Efficient Global-Local Memory for Real-time Instrument Segmentation of Robotic Surgical Video</strong>
+            <br>
+            <em><i>Medical Image Computing and Computer Assisted Intervention (<strong>MICCAI</strong>)</i>, 2021</em>
+        </div>
+    </div>
+</div>
+
+<div id="education">
+    <div class="container">
+        <h2 class="section_title">Education</h2>
+        <div class="row work-block">
+            <ul>
+                <li>[2018.09-Now] &nbsp; PhD student at <a href="https://informatics.xmu.edu.cn/" target="_blank">School of Informatics</a>, Xiamen University.
+                <li>[2014.09-2018.07] &nbsp; Bachelor of Science at <a href="https://informatics.xmu.edu.cn/" target="_blank">School of Informatics</a>, Xiamen University.
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="prizes">
+    <div class="container">
+        <h2 class="section_title">Selected Prizes</h2>
+        <div class="row work-block">
+            <ul>
+                <li> The 1-st place of AdaptOR Challenge in MICCAI 2021.
+                <li> The 1-st place of ROBUST-MIS Challenge in MICCAI 2019.
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container footer">
+    <div class="row">
+        <div class="text-center">
+        Jiacheng Wang @2021 &nbsp;&nbsp;&nbsp;&nbsp; Total Visitors:
+        <a href='https://www.counter12.com'><img src='https://www.counter12.com/img-82b92YYyyBDcAY24-26.gif' border='0' alt='conter12'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=82b92YYyyBDcAY24'></script>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
 </html>
