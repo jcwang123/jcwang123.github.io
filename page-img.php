@@ -77,7 +77,7 @@ function usePublicCdn()
 
 
 	 
-		/**	 照片分页  使用前请设置  $max=999;  页面输出照片数量 
+		// /**	 照片分页  使用前请设置  $max=999;  页面输出照片数量 
 
 		$Previous_page=$page-1;
 		 
@@ -105,7 +105,7 @@ function usePublicCdn()
 		 
 				}
 
-		**/	 
+		// **/	 
 
 	?>			
 			
