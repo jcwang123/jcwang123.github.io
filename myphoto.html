@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Photo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/noscript.css" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1635479_m8o2ir6mitf.css">
+    <script src="https://at.alicdn.com/t/font_1635479_m8o2ir6mitf.js"></script>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a ><strong>Jcwang</strong></a> Photos</h1>
+            <nav>
+                <ul>
+                    <li><a type="button" id="fullscreen" class="btn btn-default visible-lg visible-md" alt="切换全屏"><svg
+                                class="icon-zmki zmki_dh zmki_wap" aria-hidden="true">
+                                <use xlink:href="#icon-zmki-ziyuan-copy"></use>
+                            </svg></a></li>
+                    <li><a href="#footer" class="icon solid fa-info-circle">关于</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main -->
+        <div id="main">
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="panel">
+            <div class="inner split">
+                <div class="inner split">
+                    <div>
+                        <section>
+                            <h2>Contact with me</h2>
+                            <ul class="icons">
+                                <li><a href="https://github.com/jcwang123" target="_blank"
+                                        class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                            </ul>
+                        </section>
+                        <span style="color: #b5b5b5; font-size: 0.8em;">
+                        </span>
+                        <p class="copyright">
+                            &copy; Design HTML UP Modify BY <a href="https://xiamuyourenzhang.cn/">Xiamu</a> Theme:<a
+                                href="https://xiamuyourenzhang.cn/">Time</a>.
+                        </p>
+                        <div>
+                        </div>
+                    </div>
+                    <div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+    function isInSight(el) {
+        const bound = el.getBoundingClientRect();
+        const clientHeight = window.innerHeight;
+        //如果只考虑向下滚动加载
+        //const clientWidth=window.innerWeight;
+        return bound.top <= clientHeight + 100;
+    }
+
+    let index = 0;
+
+    function checkImgs() {
+        const imgs = document.querySelectorAll('.my-photo');
+        
+        for (let i = index; i < imgs.length; i++) {
+            if (isInSight(imgs[i])) {
+                loadImg(imgs[i]);
+                index = i;
+            }
+        }
+        // Array.from(imgs).forEach(el => {
+        //   if (isInSight(el)) {
+        //     loadImg(el);
+        //   }
+        // })
+    }
+
+    function loadImg(el) {
+        if (!el.src) {
+            const source = el.dataset.src;
+            el.src = source;
+        }
+    }
+
+    function throttle(fn, mustRun = 10) {
+        const timer = null;
+        let previous = null;
+        return function() {
+            const now = new Date();
+            const context = this;
+            const args = arguments;
+            if (!previous) {
+                previous = now;
+            }
+            const remaining = now - previous;
+            if (mustRun && remaining >= mustRun) {
+                fn.apply(context, args);
+                previous = now;
+            }
+        }
+    }
+    </script>
+    <script>
+    window.onload = checkImgs;
+    window.onscroll = throttle(checkImgs);
+
+
+	//$page=$_GET['page'];//获取当前页数
+
+    var page = 1
+	 
+	var max = 999//设置每页显示图片最大张数
+	 
+	var path = "./photos" //图片所在目录
+	
+    var html_txt = document.getElementById('main').innerHTML;
+    
+    var files = ['爆胎.jpg', '海边.jpg', '西凤酒.jpg','coco.jpg','kfc.jpg','sunshine.jpg','tennis.jpg']
+        
+    var i=files.length //获取数组 array  全部图片数量
+
+
+    // for (var j=max*(page-1);j<(max*page)&&j<i;j++){//循环条件控制显示图片张数
+    
+    for (var j=0;j<i;j++){
+        var post = files[j]
+
+        var name = post.split('.')[0]
+        var src = path+'/'+post
+        // window.alert('post:'+post)
+        document.getElementById('main').innerHTML += "<article class=\"thumb img-area\"> <a class=\"image my-photo\"  alt=\"loading\"  data-src=\""+src+"\"  href=\""+src+"\" > <img class=\"zmki_px  my-photo\" data-src=\""+src+"\"  /> </a> <h2>"+name+"</h2></article>"
+        
+		
+	}
+
+
+    </script>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
